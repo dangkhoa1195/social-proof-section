@@ -13,22 +13,32 @@ body {
   flex-direction: column;
   font-family: "League Spartan", sans-serif;
   font-size: 1.5rem;
+  justify-content: center;
   min-height: 100vh;
   padding: 2.5rem;
 }
 @media only screen and (min-width: 576px) {
   body {
     background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-    background-position: 15% 0%, 100% 20%;
+    background-position: 10% 15%, 100% 20%;
   }
 }
 
 @media only screen and (min-width: 576px) {
   .social-proof {
     display: grid;
+    grid-row-gap: 7rem;
     grid-template-areas: "desc ratings" "testimonials testimonials";
     grid-template-columns: 1fr 1fr;
     max-width: 111rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .social-proof__desc {
+    grid-area: desc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .social-proof__desc-title {
@@ -39,6 +49,14 @@ body {
   padding: 5.5rem 4.5rem 0 4.5rem;
   text-align: center;
 }
+@media only screen and (min-width: 576px) {
+  .social-proof__desc-title {
+    font-size: 4rem;
+    text-align: start;
+    padding-left: 0;
+    padding-right: 20rem;
+  }
+}
 .social-proof__desc-paragraph {
   color: hsl(303deg, 10%, 53%);
   font-size: 1.8rem;
@@ -47,11 +65,25 @@ body {
   margin-bottom: 4.5rem;
   text-align: center;
 }
+@media only screen and (min-width: 576px) {
+  .social-proof__desc-paragraph {
+    text-align: start;
+    padding-right: 12rem;
+  }
+}
 .social-proof__ratings {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 5rem;
+}
+@media only screen and (min-width: 576px) {
+  .social-proof__ratings {
+    grid-area: ratings;
+    justify-content: center;
+    margin-bottom: 0;
+    max-width: 45rem;
+  }
 }
 .social-proof__testimonials {
   display: flex;
@@ -59,17 +91,45 @@ body {
   gap: 1.5rem;
   margin-bottom: 5rem;
 }
+@media only screen and (min-width: 576px) {
+  .social-proof__testimonials {
+    grid-area: testimonials;
+    flex-direction: row;
+  }
+}
 
 .rating {
   background-color: hsl(300deg, 24%, 96%);
   border-radius: 1rem;
   padding: 2rem 0;
 }
+@media only screen and (min-width: 576px) {
+  .rating {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    padding: 2rem 3rem;
+  }
+  .rating:nth-child(2) {
+    position: relative;
+    left: 5rem;
+  }
+  .rating:nth-child(3) {
+    position: relative;
+    left: 10rem;
+  }
+}
 .rating__stars {
+  align-items: center;
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .rating__stars {
+    margin-bottom: 0;
+  }
 }
 .rating__desc {
   color: hsl(300deg, 43%, 22%);
@@ -82,6 +142,19 @@ body {
   border-radius: 1rem;
   color: hsl(300deg, 24%, 96%);
   padding: 4rem 3rem;
+}
+@media only screen and (min-width: 576px) {
+  .testimonial {
+    max-width: 35rem;
+  }
+  .testimonial:nth-child(2) {
+    position: relative;
+    top: 1.5rem;
+  }
+  .testimonial:nth-child(3) {
+    position: relative;
+    top: 3rem;
+  }
 }
 .testimonial__header {
   align-items: center;
