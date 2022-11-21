@@ -1,1 +1,108 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 2.5rem;
+}
+@media only screen and (min-width: 576px) {
+  body {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-position: 15% 0%, 100% 20%;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .social-proof {
+    display: grid;
+    grid-template-areas: "desc ratings" "testimonials testimonials";
+    grid-template-columns: 1fr 1fr;
+    max-width: 111rem;
+  }
+}
+.social-proof__desc-title {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  padding: 5.5rem 4.5rem 0 4.5rem;
+  text-align: center;
+}
+.social-proof__desc-paragraph {
+  color: hsl(303deg, 10%, 53%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 4.5rem;
+  text-align: center;
+}
+.social-proof__ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+.social-proof__testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.rating {
+  background-color: hsl(300deg, 24%, 96%);
+  border-radius: 1rem;
+  padding: 2rem 0;
+}
+.rating__stars {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.rating__desc {
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+  text-align: center;
+}
+
+.testimonial {
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 1rem;
+  color: hsl(300deg, 24%, 96%);
+  padding: 4rem 3rem;
+}
+.testimonial__header {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.testimonial__header-image {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+.testimonial__review {
+  line-height: 1.4;
+}
+
+.info__name {
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.info__title {
+  color: hsl(333deg, 80%, 67%);
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
